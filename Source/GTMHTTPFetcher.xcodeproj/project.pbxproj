@@ -33,6 +33,14 @@
 		4FCC75E611EE6B1C0097924C /* GTMHTTPFetcherService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCC75E411EE6B1C0097924C /* GTMHTTPFetcherService.m */; };
 		4FCC787A11EFA6030097924C /* GTMHTTPFetchHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCC787911EFA6030097924C /* GTMHTTPFetchHistory.m */; };
 		4FCC787B11EFA6030097924C /* GTMHTTPFetchHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCC787911EFA6030097924C /* GTMHTTPFetchHistory.m */; };
+		BB9EA7E414E12B60002A3E14 /* GTMHTTPFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F3471F311DD58D700CB050E /* GTMHTTPFetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB9EA7E514E12B60002A3E14 /* GTMHTTPFetchHistory.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FCC787C11EFA6090097924C /* GTMHTTPFetchHistory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB9EA7E614E12B60002A3E14 /* GTMHTTPFetcherService.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FCC75E711EE6B230097924C /* GTMHTTPFetcherService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB9EA7E714E12B60002A3E14 /* GTMHTTPFetcherLogging.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F3471F511DD58D700CB050E /* GTMHTTPFetcherLogging.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB9EA7E814E12B60002A3E14 /* GTMHTTPUploadFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F3471F711DD58D700CB050E /* GTMHTTPUploadFetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB9EA7E914E12B60002A3E14 /* GTMGatherInputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F3471F111DD58D700CB050E /* GTMGatherInputStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB9EA7EA14E12B60002A3E14 /* GTMMIMEDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F3471F911DD58D700CB050E /* GTMMIMEDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB9EA7EB14E12B60002A3E14 /* GTMReadMonitorInputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F8DB2C013FC9AE90001DD6C /* GTMReadMonitorInputStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -167,6 +175,24 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		BB9EA7E214E12B49002A3E14 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB9EA7E414E12B60002A3E14 /* GTMHTTPFetcher.h in Headers */,
+				BB9EA7E514E12B60002A3E14 /* GTMHTTPFetchHistory.h in Headers */,
+				BB9EA7E614E12B60002A3E14 /* GTMHTTPFetcherService.h in Headers */,
+				BB9EA7E714E12B60002A3E14 /* GTMHTTPFetcherLogging.h in Headers */,
+				BB9EA7E814E12B60002A3E14 /* GTMHTTPUploadFetcher.h in Headers */,
+				BB9EA7E914E12B60002A3E14 /* GTMGatherInputStream.h in Headers */,
+				BB9EA7EA14E12B60002A3E14 /* GTMMIMEDocument.h in Headers */,
+				BB9EA7EB14E12B60002A3E14 /* GTMReadMonitorInputStream.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		4F74D92E11E68BD300F2D927 /* UnitTests */ = {
 			isa = PBXNativeTarget;
@@ -191,7 +217,9 @@
 			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "GTMHTTPFetcherLib" */;
 			buildPhases = (
 				D2AAC07B0554694100DB518D /* Sources */,
+				BB9EA7E214E12B49002A3E14 /* Headers */,
 				D2AAC07C0554694100DB518D /* Frameworks */,
+				BB9EA7EC14E12B6E002A3E14 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -256,6 +284,19 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
+		BB9EA7EC14E12B6E002A3E14 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "/bin/sh Scripts/CopyHeadersToLegacyBuildDir.command";
+			shellScript = "";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -316,6 +357,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INSTALL_PATH = /usr/local/lib;
 				PRODUCT_NAME = GTMHTTPFetcher;
+				PUBLIC_HEADERS_FOLDER_PATH = include/GTMHTTPFetcher;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -333,6 +375,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INSTALL_PATH = /usr/local/lib;
 				PRODUCT_NAME = GTMHTTPFetcher;
+				PUBLIC_HEADERS_FOLDER_PATH = include/GTMHTTPFetcher;
 				SDKROOT = iphoneos;
 			};
 			name = Release;
