@@ -61,7 +61,7 @@
 
     NSData* data = [dataArray_ objectAtIndex:arrayIndex_];
 
-    NSUInteger dataLen = [data length];
+    long long dataLen = [data length];
     NSUInteger dataBytesLeft = dataLen - (NSUInteger)dataOffset_;
 
     NSUInteger bytesToCopy = MIN(bytesRemaining, dataBytesLeft);
