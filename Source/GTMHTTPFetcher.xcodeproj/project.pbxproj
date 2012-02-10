@@ -467,6 +467,7 @@
 				PRODUCT_NAME = GTMHTTPFetcher;
 				PUBLIC_HEADERS_FOLDER_PATH = include/GTMHTTPFetcher;
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -485,6 +486,7 @@
 				PRODUCT_NAME = GTMHTTPFetcher;
 				PUBLIC_HEADERS_FOLDER_PATH = include/GTMHTTPFetcher;
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
